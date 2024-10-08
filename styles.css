@@ -1,36 +1,111 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4ed;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
-    background-color: #2e8b57;
-    color: white;
-    padding: 10px;
+    background-color: #88bdbc;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
 }
 
 input[type="text"] {
-    padding: 10px;
+    padding: 10px 20px;
     width: 80%;
-    margin: 10px auto;
+    max-width: 600px;
+    margin: 20px auto;
     display: block;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-#tea-list {
+input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #557a95;
+}
+
+/* Main Content Styles */
+main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .tea-item {
-    background: white;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tea-item:hover {
+    transform: scale(1.05);
 }
 
 .tea-item h2 {
-    margin: 0;
+    font-size: 1.8rem;
+    color: #557a95;
+    margin-bottom: 10px;
+}
+
+.tea-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.tea-item p strong {
+    color: #557a95;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #557a95;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
+
+    .tea-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .tea-item p {
+        font-size: 0.9rem;
+    }
 }
